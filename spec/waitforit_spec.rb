@@ -16,10 +16,18 @@ describe 'waitforit' do
   
   it 'should keep trying for a specified period' do
     start_time = Time.now
-    prescribed_wait_time = 1
+    wait_time = 1
     
-    lambda{wait_until(prescribed_wait_time){false}}
+    lambda{wait_until(wait_time){false}}
     
-    (start_time + prescribed_wait_time).should be >= Time.now 
+    (start_time + wait_time).should be >= Time.now 
+  end
+  
+  it 'should be possible for user to supply the retry time' do
+    count = 0
+    wait_until(2.seconds, :retry_every => 0.5.seconds) do
+      count += 1
+      count == 4
+    end
   end
 end
