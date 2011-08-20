@@ -1,1 +1,3 @@
 rvm --create use 1.9.2@waitforit
+RVMRC_PATH="$( cd "$( dirname "$0" )" && pwd )"
+export PATH=$RVMRC_PATH/bin:$PATH

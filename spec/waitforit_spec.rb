@@ -9,4 +9,8 @@ describe 'waitforit' do
     end
     end_time.should be < Time.now
   end
+  
+  it 'should throw an exception if when the prescribed action does not happen in time' do
+    expect{wait_until(0.5){false}}.to raise_error RuntimeError
+  end
 end
