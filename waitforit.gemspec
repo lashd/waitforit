@@ -30,7 +30,8 @@ Gem::Specification.new do |s|
     "bin/rake",
     "bin/rspec",
     "lib/waitforit.rb",
-    "spec/waitforit_spec.rb"
+    "spec/waitforit_spec.rb",
+    "waitforit.gemspec"
   ]
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
