@@ -11,7 +11,7 @@ describe 'waitforit' do
   end
 
   it 'should throw an exception if when the prescribed action does not happen in time' do
-    expect { wait_until { false } }.to raise_error RuntimeError
+    expect { wait_until(:timeout_after => 1.second) { false } }.to raise_error RuntimeError
   end
 
   it 'should keep trying for a specified period' do
