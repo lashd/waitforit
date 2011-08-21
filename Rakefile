@@ -1,6 +1,5 @@
 Bundler.require(:default, :development)
 RSpec::Core::RakeTask.new('default')
-Jeweler::RubygemsDotOrgTasks.new
 
 Jeweler::Tasks.new do |gem|
   gem.name = "waitforit"
@@ -10,3 +9,4 @@ Jeweler::Tasks.new do |gem|
   gem.email = "leon_a_d@yahoo.com"
   gem.authors = ["lashd"]
 end
+Jeweler::RubygemsDotOrgTasks.new
