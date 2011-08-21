@@ -12,7 +12,7 @@ class Fixnum
 end
 
 def wait_until opts={}
-  opts.merge!(:timeout_after => 2.seconds,:retry_every => 0.1.seconds)
+  opts = {:timeout_after => 2.seconds,:retry_every => 0.1.seconds}.merge(opts)
   start_time = Time.now
   until Time.now > start_time + opts[:timeout_after]
     return if yield == true
