@@ -11,11 +11,12 @@ class Fixnum
   include TimeIncrements
 end
 
-def wait_until max_wait_time=10, opts={:retry_every => 1.seconds}
+def wait_until opts={}
+  opts.merge!(:timeout_after => 2.seconds,:retry_every => 0.1.seconds)
   start_time = Time.now
-  until Time.now > start_time + max_wait_time
+  until Time.now > start_time + opts[:timeout_after]
     return if yield == true
-    sleep 0.5
+    sleep opts[:retry_every]
   end
   raise RuntimeError, "Action took to long"
 end
