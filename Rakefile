@@ -1,6 +1,5 @@
 Bundler.require(:default, :development)
 RSpec::Core::RakeTask.new('default')
-
 Jeweler::RubygemsDotOrgTasks.new
 
 Jeweler::Tasks.new do |gem|
