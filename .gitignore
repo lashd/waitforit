@@ -1,4 +1,8 @@
 *.iml
-.idea/*
-.bundle/*
-pkg/*
+.idea
+coverage
+rdoc
+doc
+.yardoc
+.bundle
+pkg
