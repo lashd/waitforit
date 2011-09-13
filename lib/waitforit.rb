@@ -31,7 +31,7 @@ def wait_until opts={}
   opts = {:timeout_after => 5.seconds,:retry_every => 0.1.seconds}.merge(opts)
   start_time = Time.now
   until Time.now > start_time + opts[:timeout_after]
-    return if yield == true
+    return true if yield == true
     sleep opts[:retry_every]
   end
   raise RuntimeError, "Action took to long"

@@ -34,4 +34,8 @@ describe 'waitforit' do
       count.should == 2
     end
   end
+  
+  it 'should be able to nest wait_until statements' do
+    wait_until{wait_until{true}}
+  end
 end
