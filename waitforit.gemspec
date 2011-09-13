@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{waitforit}
-  s.version = "0.0.1.pre10"
+  s.version = "0.0.1.pre11"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["lashd"]
-  s.date = %q{2011-08-26}
+  s.date = %q{2011-09-13}
   s.description = %q{Tired of sleeping when something is supposed to happen? use this to waitforit instead :)}
   s.email = %q{leon_a_d@yahoo.com}
   s.extra_rdoc_files = [
