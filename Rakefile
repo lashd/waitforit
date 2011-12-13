@@ -1,3 +1,4 @@
+require 'bundler'
 Bundler.require(:default, :development)
 RSpec::Core::RakeTask.new('default')
 
