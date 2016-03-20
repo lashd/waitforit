@@ -2,6 +2,8 @@ require 'rspec'
 require "#{File.dirname(__FILE__)}/../lib/waitforit"
 
 describe 'waitforit' do
+  using ::Waitforit::TimeIncrements
+
   it 'should wait until the prescribed thing has happened' do
     end_time = Time.now + 1
     wait_until do
@@ -34,7 +36,7 @@ describe 'waitforit' do
       count.should == 2
     end
   end
-  
+
   it 'should be able to nest wait_until statements' do
     wait_until{wait_until{true}}
   end
